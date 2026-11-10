@@ -95,7 +95,9 @@ trial counts of Script #9c.
 
 Run on ds006979 version 1.1.4 with the original ICA weights, for the 52 participants of the
 probe-locked analyses (participant 3 excluded, see Notes). "MATLAB" is the same statistics
-applied to the MATLAB measurement files of the same 52 participants (Script #11c output).
+applied to the MATLAB measurement files of the same 52 participants (Script #11c output,
+`reference/measurements`): no MATLAB code is run, so any difference comes from the measures,
+not from the statistics software.
 
 | Step | Julia vs. MATLAB/ERPLAB |
 | --- | --- |
