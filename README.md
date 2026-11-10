@@ -88,9 +88,6 @@ julia --project=. scripts/03_measures_and_statistics.jl # measures, ANOVAs, comp
 | `Figure5_N2_FN400_StimulusType.png/.pdf`, `Figure6_N2_FN400_ProbeType.png/.pdf` | Figures 5 and 6 of the paper, same design as `Figures_N2_FN400_probe.m` (20 Hz low-pass, 300 dpi) |
 | `n2pc_probe.png` | Probe N2pc grand average, same style (not in the paper) |
 
-`reference/` holds the MATLAB outputs used for these comparisons: the measurement files
-of Script #11c and the cluster test results (time points and p-values) of the revised analysis.
-
 ## Validation
 
 Run on ds006979 version 1.1.4 with the ICA weights of the analysis, for the 53 participants of
@@ -106,22 +103,20 @@ MATLAB code is run, so any difference comes from the measures, not from the stat
 | Onset latencies | 970 / 975 identical (the others differ by one sample, 3.9 ms) |
 | Mean amplitudes | mean difference 0.0013–0.0017 µV, max 0.065 µV (MATLAB rounds to 3 decimals) |
 
-| Model | Julia (N = 53) | MATLAB (N = 53) |
-| --- | --- | --- |
-| N2 amplitude, stimulus type (5.a) | F(3, 156) = 1.13, p = .340 | F(3, 156) = 1.12, p = .342 |
-| N2 peak latency, stimulus type (5.b) | F(3, 156) = 0.76, p = .516 | F(3, 156) = 0.76, p = .516 |
-| FN400 amplitude, stimulus type (6.a) | F(2.38, 123.67) = 0.19, p = .866 | F(2.38, 123.67) = 0.19, p = .865 |
-| FN400 peak latency, stimulus type (6.b) | F(3, 156) = 1.08, p = .357 | F(3, 156) = 1.08, p = .357 |
-| N2 amplitude, probe type (8.a) | F(1, 52) = 0.32, p = .574 | F(1, 52) = 0.32, p = .573 |
-| N2 peak latency, probe type (8.b) | F(1, 52) = 3.63, p = .062 | F(1, 52) = 3.63, p = .062 |
-| FN400 amplitude, probe type (9.a) | F(1, 52) = 1.60, p = .211 | F(1, 52) = 1.61, p = .210 |
-| FN400 peak latency, probe type (9.b) | F(1, 52) = 0.26, p = .610 | F(1, 52) = 0.26, p = .610 |
-| N2 onset latency, probe type (4.b) | F(1, 39) = 0.07, p = .799 | F(1, 39) = 0.07, p = .799 |
-| FN400 onset latency, probe type (4.c) | F(1, 28) = 0.96, p = .336 | F(1, 28) = 0.94, p = .340 |
-
-The exploratory 2 × 2 on onset latency is identical to MATLAB for all six effects (e.g.
-N2 probe F(1, 39) = 3.10, p = .086; FN400 proximity F(1, 28) = 2.72, p = .110). No effect is
-significant, as in the paper.
+| Model | Julia (N = 53) | MATLAB (N = 53) | Reproduced |
+| --- | --- | --- | --- |
+| N2 amplitude, stimulus type (5.a) | F(3, 156) = 1.13, p = .340 | F(3, 156) = 1.12, p = .342 | Yes |
+| N2 peak latency, stimulus type (5.b) | F(3, 156) = 0.76, p = .516 | F(3, 156) = 0.76, p = .516 | Yes |
+| FN400 amplitude, stimulus type (6.a) | F(2.38, 123.67) = 0.19, p = .866 | F(2.38, 123.67) = 0.19, p = .865 | Yes |
+| FN400 peak latency, stimulus type (6.b) | F(3, 156) = 1.08, p = .357 | F(3, 156) = 1.08, p = .357 | Yes |
+| N2 amplitude, probe type (8.a) | F(1, 52) = 0.32, p = .574 | F(1, 52) = 0.32, p = .573 | Yes |
+| N2 peak latency, probe type (8.b) | F(1, 52) = 3.63, p = .062 | F(1, 52) = 3.63, p = .062 | Yes |
+| FN400 amplitude, probe type (9.a) | F(1, 52) = 1.60, p = .211 | F(1, 52) = 1.61, p = .210 | Yes |
+| FN400 peak latency, probe type (9.b) | F(1, 52) = 0.26, p = .610 | F(1, 52) = 0.26, p = .610 | Yes |
+| N2 onset latency, probe type (4.b) | F(1, 39) = 0.07, p = .799 | F(1, 39) = 0.07, p = .799 | Yes |
+| FN400 onset latency, probe type (4.c) | F(1, 28) = 0.96, p = .336 | F(1, 28) = 0.94, p = .340 | Yes |
+| N2 onset latency, probe × proximity (exploratory) | probe F(1, 39) = 3.10, p = .086; proximity F = 0.01, p = .917; interaction F = 1.35, p = .252 | same | Yes |
+| FN400 onset latency, probe × proximity (exploratory) | probe F(1, 28) = 0.45, p = .510; proximity F = 2.72, p = .110; interaction F = 0.21, p = .648 | same | Yes |
 
 ## Notes
 
