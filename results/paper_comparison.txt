@@ -1,70 +1,72 @@
-Probe-locked N2/FN400: Julia vs. MATLAB/R (Stage 2 manuscript)
+Probe-locked N2/FN400: Julia vs. MATLAB/R (revised analysis)
 
-Julia and MATLAB lines: N = 52 (participant(s) 3 excluded, see config.jl); paper: N = 53.
-Lines: Julia pipeline | the same statistics on the MATLAB measurement files | paper
+Julia and MATLAB lines: N = 53; MATLAB/R: N = 53.
+Lines: Julia pipeline | the same statistics on the MATLAB measurement files | R output
 
 N2 amplitude, stimulus type (5.a)
-  Julia : F(3, 153) = 1.21, p = 0.308, ηp² = 0.023
-  MATLAB: F(3, 153) = 1.20, p = 0.310, ηp² = 0.023
-  Paper (N = 53): F(3, 156) = 1.24, p = 0.30, ηp² = 0.023
+  Julia : F(3, 156) = 1.13, p = 0.340, ηp² = 0.021
+  MATLAB: F(3, 156) = 1.12, p = 0.342, ηp² = 0.021
+  MATLAB/R (R output, N = 53): F(3, 156) = 1.12, p = 0.34, ηp² = 0.021
 
 N2 peak latency, stimulus type (5.b)
-  Julia : F(3, 153) = 0.90, p = 0.442, ηp² = 0.017
-  MATLAB: F(3, 153) = 0.90, p = 0.442, ηp² = 0.017
-  Paper (N = 53): F(3, 156) = 1.12, p = 0.34, ηp² = 0.021
+  Julia : F(3, 156) = 0.76, p = 0.516, ηp² = 0.014
+  MATLAB: F(3, 156) = 0.76, p = 0.516, ηp² = 0.014
+  MATLAB/R (R output, N = 53): F(3, 156) = 0.76, p = 0.52, ηp² = 0.014
 
 FN400 amplitude, stimulus type (6.a)
-  Julia : F(2.35, 119.82) = 0.16, p = 0.884, ηp² = 0.003 (GG)
-  MATLAB: F(2.35, 119.82) = 0.16, p = 0.883, ηp² = 0.003 (GG)
-  Paper (N = 53): F(2.38, 123.76) = 0.18, p = 0.87, ηp² = 0.003
+  Julia : F(2.38, 123.67) = 0.19, p = 0.866, ηp² = 0.004 (GG)
+  MATLAB: F(2.38, 123.67) = 0.19, p = 0.865, ηp² = 0.004 (GG)
+  MATLAB/R (R output, N = 53): F(2.38, 123.67) = 0.19, p = 0.87, ηp² = 0.004
 
 FN400 peak latency, stimulus type (6.b)
-  Julia : F(3, 153) = 0.85, p = 0.471, ηp² = 0.016
-  MATLAB: F(3, 153) = 0.85, p = 0.471, ηp² = 0.016
-  Paper (N = 53): F(3, 156) = 0.83, p = 0.48, ηp² = 0.016
+  Julia : F(3, 156) = 1.08, p = 0.357, ηp² = 0.020
+  MATLAB: F(3, 156) = 1.08, p = 0.357, ηp² = 0.020
+  MATLAB/R (R output, N = 53): F(3, 156) = 1.09, p = 0.36, ηp² = 0.020
 
 N2 amplitude, probe type (8.a)
-  Julia : F(1, 51) = 0.51, p = 0.477, ηp² = 0.010
-  MATLAB: F(1, 51) = 0.51, p = 0.476, ηp² = 0.010
-  Paper (N = 53): F(1, 52) = 0.60, p = 0.44, ηp² = 0.011
+  Julia : F(1, 52) = 0.32, p = 0.574, ηp² = 0.006
+  MATLAB: F(1, 52) = 0.32, p = 0.573, ηp² = 0.006
+  MATLAB/R (R output, N = 53): F(1, 52) = 0.32, p = 0.57, ηp² = 0.006
 
 N2 peak latency, probe type (8.b)
-  Julia : F(1, 51) = 3.18, p = 0.081, ηp² = 0.059
-  MATLAB: F(1, 51) = 3.18, p = 0.081, ηp² = 0.059
-  Paper (N = 53): F(1, 52) = 2.40, p = 0.13, ηp² = 0.044
+  Julia : F(1, 52) = 3.63, p = 0.062, ηp² = 0.065
+  MATLAB: F(1, 52) = 3.63, p = 0.062, ηp² = 0.065
+  MATLAB/R (R output, N = 53): F(1, 52) = 3.63, p = 0.06, ηp² = 0.065
 
 FN400 amplitude, probe type (9.a)
-  Julia : F(1, 51) = 1.54, p = 0.220, ηp² = 0.029
-  MATLAB: F(1, 51) = 1.55, p = 0.219, ηp² = 0.029
-  Paper (N = 53): F(1, 52) = 1.59, p = 0.21, ηp² = 0.030
+  Julia : F(1, 52) = 1.60, p = 0.211, ηp² = 0.030
+  MATLAB: F(1, 52) = 1.61, p = 0.210, ηp² = 0.030
+  MATLAB/R (R output, N = 53): F(1, 52) = 1.61, p = 0.21, ηp² = 0.030
 
 FN400 peak latency, probe type (9.b)
-  Julia : F(1, 51) = 0.23, p = 0.636, ηp² = 0.004
-  MATLAB: F(1, 51) = 0.23, p = 0.636, ηp² = 0.004
-  Paper (N = 53): F(1, 52) = 0.22, p = 0.64, ηp² = 0.004
+  Julia : F(1, 52) = 0.26, p = 0.610, ηp² = 0.005
+  MATLAB: F(1, 52) = 0.26, p = 0.610, ηp² = 0.005
+  MATLAB/R (R output, N = 53): F(1, 52) = 0.26, p = 0.61, ηp² = 0.005
 
 N2 onset latency, probe type (4.b)
-  Julia : F(1, 38) = 0.56, p = 0.457, ηp² = 0.015
-  MATLAB: F(1, 38) = 0.56, p = 0.457, ηp² = 0.015
-  Paper (N = 53): F(1, 39) = 0.78, p = 0.38, ηp² = 0.020
+  Julia : F(1, 39) = 0.07, p = 0.799, ηp² = 0.002
+  MATLAB: F(1, 39) = 0.07, p = 0.799, ηp² = 0.002
+  MATLAB/R (R output, N = 53): F(1, 39) = 0.07, p = 0.80, ηp² = 0.002
 
 FN400 onset latency, probe type (4.c)
-  Julia : F(1, 28) = 0.52, p = 0.475, ηp² = 0.018
-  MATLAB: F(1, 28) = 0.51, p = 0.480, ηp² = 0.018
-  Paper (N = 53): F(1, 29) = 0.38, p = 0.54, ηp² = 0.013
+  Julia : F(1, 28) = 0.96, p = 0.336, ηp² = 0.033
+  MATLAB: F(1, 28) = 0.94, p = 0.340, ηp² = 0.033
+  MATLAB/R (R output, N = 53): F(1, 28) = 0.94, p = 0.34, ηp² = 0.033
 
 Exploratory 2 × 2 (probe × proximity) on onset latency
-  N2     probe           Julia F(1, 38) = 2.54, p = 0.119 | MATLAB F(1, 38) = 2.54, p = 0.119 | paper F = 2.22, p = 0.144
-  N2     stimulus        Julia F(1, 38) = 0.06, p = 0.814 | MATLAB F(1, 38) = 0.06, p = 0.814 | paper F = 0.10, p = 0.757
-  N2     probe:stimulus  Julia F(1, 38) = 1.02, p = 0.318 | MATLAB F(1, 38) = 1.02, p = 0.318 | paper F = 1.66, p = 0.205
-  FN400  probe           Julia F(1, 28) = 0.11, p = 0.741 | MATLAB F(1, 28) = 0.11, p = 0.741 | paper F = 0.10, p = 0.754
-  FN400  stimulus        Julia F(1, 28) = 3.42, p = 0.075 | MATLAB F(1, 28) = 3.42, p = 0.075 | paper F = 4.06, p = 0.053
-  FN400  probe:stimulus  Julia F(1, 28) = 0.81, p = 0.375 | MATLAB F(1, 28) = 0.81, p = 0.375 | paper F = 0.98, p = 0.330
+  N2     probe           Julia F(1, 39) = 3.10, p = 0.086 | MATLAB F(1, 39) = 3.10, p = 0.086 | MATLAB/R F = 3.10, p = 0.086
+  N2     stimulus        Julia F(1, 39) = 0.01, p = 0.917 | MATLAB F(1, 39) = 0.01, p = 0.917 | MATLAB/R F = 0.01, p = 0.917
+  N2     probe:stimulus  Julia F(1, 39) = 1.35, p = 0.252 | MATLAB F(1, 39) = 1.35, p = 0.252 | MATLAB/R F = 1.35, p = 0.252
+  FN400  probe           Julia F(1, 28) = 0.45, p = 0.510 | MATLAB F(1, 28) = 0.45, p = 0.510 | MATLAB/R F = 0.45, p = 0.510
+  FN400  stimulus        Julia F(1, 28) = 2.72, p = 0.110 | MATLAB F(1, 28) = 2.72, p = 0.110 | MATLAB/R F = 2.72, p = 0.110
+  FN400  probe:stimulus  Julia F(1, 28) = 0.21, p = 0.648 | MATLAB F(1, 28) = 0.21, p = 0.648 | MATLAB/R F = 0.21, p = 0.648
 
 Per-participant measures, Julia vs. MATLAB (all bins):
-  FN400  mean_amplitude  identical 370/520, max |diff| = 0.065, mean |diff| = 0.0017, NaN mismatches = 0
-  FN400  onset_latency   identical 457/460, max |diff| = 3.907, mean |diff| = 0.0254, NaN mismatches = 0
-  FN400  peak_latency    identical 520/520, max |diff| = 0.000, mean |diff| = 0.0000, NaN mismatches = 0
-  N2     mean_amplitude  identical 373/520, max |diff| = 0.036, mean |diff| = 0.0013, NaN mismatches = 0
-  N2     onset_latency   identical 493/495, max |diff| = 3.907, mean |diff| = 0.0153, NaN mismatches = 0
-  N2     peak_latency    identical 520/520, max |diff| = 0.000, mean |diff| = 0.0000, NaN mismatches = 0
+  FN400  mean_amplitude  identical 378/530, max |diff| = 0.065, mean |diff| = 0.0017, NaN mismatches = 0
+  FN400  onset_latency   identical 466/469, max |diff| = 3.907, mean |diff| = 0.0250, NaN mismatches = 0
+  FN400  peak_latency    identical 530/530, max |diff| = 0.000, mean |diff| = 0.0000, NaN mismatches = 0
+  N2     mean_amplitude  identical 382/530, max |diff| = 0.036, mean |diff| = 0.0013, NaN mismatches = 0
+  N2     onset_latency   identical 504/506, max |diff| = 3.907, mean |diff| = 0.0150, NaN mismatches = 0
+  N2     peak_latency    identical 530/530, max |diff| = 0.000, mean |diff| = 0.0000, NaN mismatches = 0
+
+Accepted trials (N2/FN400 set, bin 17 = all probes): Julia 56128, ERPLAB 55642

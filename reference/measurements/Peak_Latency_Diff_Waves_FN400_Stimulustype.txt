@@ -1,7 +1,7 @@
 bin55_2-UR_2ChanAverageFN400(Fz,Cz)	bin56_3-UR_2ChanAverageFN400(Fz,Cz)	bin52_3-RWP_2ChanAverageFN400(Fz,Cz)	bin53_3-RSP_2ChanAverageFN400(Fz,Cz)	                              ERPset
 402.344	433.594	410.156	402.344	1_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 316.406	382.812	316.406	312.500	2_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
-359.375	300.781	324.219	324.219	3_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
+339.844	371.094	300.781	328.125	3_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 441.406	410.156	402.344	398.438	4_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 312.500	390.625	433.594	308.594	7_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 378.906	460.938	433.594	359.375	8_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
@@ -32,10 +32,10 @@ bin55_2-UR_2ChanAverageFN400(Fz,Cz)	bin56_3-UR_2ChanAverageFN400(Fz,Cz)	bin52_3-
 410.156	363.281	453.125	351.562	40_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 406.250	363.281	394.531	312.500	41_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 460.938	347.656	433.594	304.688	43_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
-363.281	375.000	363.281	375.000	46_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
+363.281	375.000	363.281	320.312	46_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 382.812	332.031	347.656	390.625	47_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 355.469	375.000	320.312	324.219	48_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
-300.781	410.156	433.594	375.000	49_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
+359.375	410.156	441.406	375.000	49_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 375.000	328.125	316.406	453.125	50_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 417.969	449.219	390.625	445.312	51_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 316.406	343.750	343.750	312.500	52_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
@@ -46,7 +46,7 @@ bin55_2-UR_2ChanAverageFN400(Fz,Cz)	bin56_3-UR_2ChanAverageFN400(Fz,Cz)	bin52_3-
 449.219	332.031	441.406	367.188	61_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 359.375	417.969	382.812	441.406	62_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 339.844	382.812	324.219	414.062	64_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
-367.188	421.875	339.844	343.750	69_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
+363.281	421.875	339.844	343.750	69_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 433.594	402.344	457.031	425.781	70_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 351.562	316.406	460.938	312.500	72_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt
 390.625	339.844	414.062	445.312	73_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest_lpfilt

@@ -6,7 +6,8 @@
 # Set the DS006979 environment variable, or put the dataset in data/ds006979.
 const BIDS_ROOT = get(ENV, "DS006979", joinpath(@__DIR__, "..", "data", "ds006979"))
 const TASK = "visualworkingmemorytask"
-const RESULTS = joinpath(@__DIR__, "..", "results")
+# Output folder; RESULTS_DIR=/path runs the pipeline into another folder (e.g. a sensitivity run).
+const RESULTS = get(ENV, "RESULTS_DIR", joinpath(@__DIR__, "..", "results"))
 const REFERENCE = joinpath(@__DIR__, "..", "reference")      # MATLAB outputs, for validation
 
 # --- Participants ----------------------------------------------------------
@@ -16,14 +17,12 @@ const ALL_IDS = [1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15,
                  32, 33, 34, 35, 36, 39, 40, 41, 43, 46, 47, 48,
                  49, 50, 51, 52, 53, 54, 58, 59, 61, 62, 64,
                  69, 70, 72, 73, 74, 76]
-# Participant 3 is excluded from the probe-locked analyses: in its Script #0 dataset
-# (3.set) the three unused external channels (EXG1, EXG7, EXG8) were not removed, so
-# from position 65 on the channels were shifted by one in every later (position-based)
-# step: wrong EOG channels for artifact detection, HEOG-right and Mastoid-left as the
-# mastoid reference, and ICA weights computed on these channels. Participant 3 is
-# excluded from the stimulus-locked analyses with either channel assignment.
-# Set EXCLUDED_IDS = Int[] to run all 53.
-const EXCLUDED_IDS = [3]
+# Participant 3: in its original Script #0 dataset (3.set) the three unused external
+# channels (EXG1, EXG7, EXG8) were not removed, so every later (position-based) MATLAB step
+# used channels shifted by one from position 65 on. 3.set was corrected and sub-03 was
+# reprocessed from Script #1 (new ICA, components 1 and 3 removed); it is included (N = 53).
+# Julia selects channels by label, so it needs only the new ICA weights file for sub-03.
+const EXCLUDED_IDS = Int[]
 const SUBJECT_IDS = setdiff(ALL_IDS, EXCLUDED_IDS)
 const SUBJECTS = ["sub-" * lpad(string(i), 2, '0') for i in SUBJECT_IDS]
 
@@ -42,10 +41,11 @@ const LOWPASS  = (cutoff=20.0, order=8)     # Hz; ERPLAB order (48 dB/oct), pop_
 const ICA_WEIGHTS_DIR = get(ENV, "ICA_WEIGHTS",
                             joinpath(BIDS_ROOT, "derivatives", "ReplicationPeterson2015"))
 const ICS_TO_REMOVE = joinpath(@__DIR__, "ICs_to_Remove.csv")
-# Components actually removed by Script #4 where they differ from ICs_to_Remove.xlsx,
-# identified by reconstructing the MATLAB ..._ica_corr_reref.set files from the
-# uncorrected data and the weights (residual < 1e-4): to reproduce the published analysis, Julia removes these.
-const ICS_APPLIED = Dict(46 => [1, 2], 49 => [2], 69 => [1, 7])
+# Optional per-participant override of ICs_to_Remove.csv (id => components). Empty: the
+# components in ICs_to_Remove.xlsx are removed for every participant, as in the revised
+# MATLAB analysis (Script #4 was rerun for 46, 49 and 69 with the table's components).
+const ICS_APPLIED = Dict{Int,Vector{Int}}()
+const ICS_MODE = get(ENV, "ICS", "applied")
 
 # Event latency after downsampling 512 → 256 Hz: EEGLAB keeps (lat − 1)/2 + 1, which
 # is fractional (x.5) for half of the events, and pop_epoch starts the epoch at the
@@ -105,23 +105,23 @@ const PROBE_BINS = [46 => "Repeated_3-RWP", 47 => "Repeated_3-RSP", 48 => "Unrep
 const CONDITIONS = ["2-UR", "3-UR", "3-RSP", "3-RWP"]   # order used in the figures
 const COLORS = ["#0072BD", "#D95319", "#EDB120", "#7E2F8E"]
 
-# --- Published values (Stage 2 manuscript), for the comparison table --------------------
+# --- Revised MATLAB/R results (N = 53, corrected sub-03, ICs as in ICs_to_Remove.xlsx), for the comparison table --------------------
 const PAPER = Dict(
-    "N2 amplitude, stimulus type (5.a)"   => (F=1.24, df1=3.0, df2=156.0, p=0.30, eta_p2=0.023),
-    "N2 peak latency, stimulus type (5.b)" => (F=1.12, df1=3.0, df2=156.0, p=0.34, eta_p2=0.021),
-    "FN400 amplitude, stimulus type (6.a)" => (F=0.18, df1=2.38, df2=123.76, p=0.87, eta_p2=0.003),
-    "FN400 peak latency, stimulus type (6.b)" => (F=0.83, df1=3.0, df2=156.0, p=0.48, eta_p2=0.016),
-    "N2 onset latency, probe type (4.b)"   => (F=0.78, df1=1.0, df2=39.0, p=0.38, eta_p2=0.020),
-    "FN400 onset latency, probe type (4.c)" => (F=0.38, df1=1.0, df2=29.0, p=0.54, eta_p2=0.013),
-    "N2 amplitude, probe type (8.a)"      => (F=0.60, df1=1.0, df2=52.0, p=0.44, eta_p2=0.011),
-    "N2 peak latency, probe type (8.b)"   => (F=2.40, df1=1.0, df2=52.0, p=0.13, eta_p2=0.044),
-    "FN400 amplitude, probe type (9.a)"   => (F=1.59, df1=1.0, df2=52.0, p=0.21, eta_p2=0.030),
-    "FN400 peak latency, probe type (9.b)" => (F=0.22, df1=1.0, df2=52.0, p=0.64, eta_p2=0.004))
+    "N2 amplitude, stimulus type (5.a)"   => (F=1.12, df1=3.0, df2=156.0, p=0.34, eta_p2=0.021),
+    "N2 peak latency, stimulus type (5.b)" => (F=0.76, df1=3.0, df2=156.0, p=0.52, eta_p2=0.014),
+    "FN400 amplitude, stimulus type (6.a)" => (F=0.19, df1=2.38, df2=123.67, p=0.87, eta_p2=0.004),
+    "FN400 peak latency, stimulus type (6.b)" => (F=1.09, df1=3.0, df2=156.0, p=0.36, eta_p2=0.020),
+    "N2 onset latency, probe type (4.b)"   => (F=0.07, df1=1.0, df2=39.0, p=0.80, eta_p2=0.002),
+    "FN400 onset latency, probe type (4.c)" => (F=0.94, df1=1.0, df2=28.0, p=0.34, eta_p2=0.033),
+    "N2 amplitude, probe type (8.a)"      => (F=0.32, df1=1.0, df2=52.0, p=0.57, eta_p2=0.006),
+    "N2 peak latency, probe type (8.b)"   => (F=3.63, df1=1.0, df2=52.0, p=0.06, eta_p2=0.065),
+    "FN400 amplitude, probe type (9.a)"   => (F=1.61, df1=1.0, df2=52.0, p=0.21, eta_p2=0.030),
+    "FN400 peak latency, probe type (9.b)" => (F=0.26, df1=1.0, df2=52.0, p=0.61, eta_p2=0.005))
 # Exploratory 2 × 2 (probe × proximity) on onset latency.
 const PAPER_2X2 = Dict(
-    ("N2", "probe") => (F=2.22, p=0.144), ("N2", "stimulus") => (F=0.10, p=0.757),
-    ("N2", "probe:stimulus") => (F=1.66, p=0.205),
-    ("FN400", "probe") => (F=0.10, p=0.754), ("FN400", "stimulus") => (F=4.06, p=0.053),
-    ("FN400", "probe:stimulus") => (F=0.98, p=0.330))
+    ("N2", "probe") => (F=3.10, p=0.086), ("N2", "stimulus") => (F=0.01, p=0.917),
+    ("N2", "probe:stimulus") => (F=1.35, p=0.252),
+    ("FN400", "probe") => (F=0.45, p=0.510), ("FN400", "stimulus") => (F=2.72, p=0.110),
+    ("FN400", "probe:stimulus") => (F=0.21, p=0.648))
 # Cluster tests (manuscript and results_clustGND_*_probe.txt).
 const PAPER_CLUSTERS = Dict("N2" => [(191.4, 449.2)], "FN400" => [(195.3, 464.8)], "N2pc" => [])

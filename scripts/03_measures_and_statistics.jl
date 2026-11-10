@@ -151,24 +151,37 @@ desc = combine(groupby(long, [:component, :measure, :bin]),
                :value => (x -> std(filter(!isnan, x))) => :sd)
 CSV.write(joinpath(RESULTS, "descriptives.csv"), desc)
 
-# Comparison table: Julia, statistics on the MATLAB measures, paper.
+# Comparison table: Julia, statistics on the MATLAB measures, R output.
 fmtF(a) = a.mauchly_p < 0.05 ? @sprintf("F(%.2f, %.2f) = %.2f, p = %.3f, ηp² = %.3f (GG)",
                                          a.gg_df1, a.gg_df2, a.F, a.gg_p, a.eta_p2) :
-                               @sprintf("F(%d, %d) = %.2f, p = %.3f, ηp² = %.3f",
+                               @sprintf("F(%g, %g) = %.2f, p = %.3f, ηp² = %.3f",
                                         a.df1, a.df2, a.F, a.p, a.eta_p2)
 io = IOBuffer()
-println(io, "Probe-locked N2/FN400: Julia vs. MATLAB/R (Stage 2 manuscript)\n")
+println(io, "Probe-locked N2/FN400: Julia vs. MATLAB/R (revised analysis)\n")
 println(io, "Julia and MATLAB lines: N = $(length(subjects))",
         isempty(EXCLUDED_IDS) ? "" : " (participant(s) $(join(EXCLUDED_IDS, ", ")) excluded, see config.jl)",
-        "; paper: N = $(length(ALL_IDS)).")
-println(io, "Lines: Julia pipeline | the same statistics on the MATLAB measurement files | paper\n")
+        "; MATLAB/R: N = $(length(ALL_IDS)).")
+# Optional sensitivity column: ALT_RESULTS=<folder of a run with ICS=listed>.
+alt_dir = get(ENV, "ALT_RESULTS", "")
+alt = isempty(alt_dir) || !isfile(joinpath(alt_dir, "anova.csv")) ? nothing :
+      CSV.read(joinpath(alt_dir, "anova.csv"), DataFrame)
+alt2 = alt === nothing || !isfile(joinpath(alt_dir, "anova_2x2_onset.csv")) ? nothing :
+       CSV.read(joinpath(alt_dir, "anova_2x2_onset.csv"), DataFrame)
+alt === nothing || (alt.model = String.(alt.model))
+alt2 === nothing || (alt2.component = String.(alt2.component); alt2.effect = String.(alt2.effect))
+println(io, "Lines: Julia pipeline | the same statistics on the MATLAB measurement files | R output",
+        alt === nothing ? "" : "\n       | Julia with the ICA components listed in ICs_to_Remove.xlsx (46, 49, 69: [1])", "\n")
 for r in eachrow(anova_julia)
     pp = PAPER[r.model]
     m = anova_matlab === nothing ? nothing : anova_matlab[anova_matlab.model .== r.model, :][1, :]
     println(io, r.model)
     println(io, "  Julia : ", fmtF(r))
     m === nothing || println(io, "  MATLAB: ", fmtF(m))
-    @printf(io, "  Paper (N = 53): F(%g, %g) = %.2f, p = %.2f, ηp² = %.3f\n\n", pp.df1, pp.df2, pp.F, pp.p, pp.eta_p2)
+    if alt !== nothing
+        a = alt[alt.model .== r.model, :]
+        nrow(a) > 0 && println(io, "  Julia, ICs as listed: ", fmtF(a[1, :]))
+    end
+    @printf(io, "  MATLAB/R (R output, N = 53): F(%g, %g) = %.2f, p = %.2f, ηp² = %.3f\n\n", pp.df1, pp.df2, pp.F, pp.p, pp.eta_p2)
 end
 println(io, "Exploratory 2 × 2 (probe × proximity) on onset latency")
 for r in eachrow(twobytwo_julia)
@@ -177,7 +190,11 @@ for r in eachrow(twobytwo_julia)
         twobytwo_matlab[(twobytwo_matlab.component .== r.component) .& (twobytwo_matlab.effect .== r.effect), :][1, :]
     @printf(io, "  %-6s %-15s Julia F(1, %d) = %.2f, p = %.3f", r.component, r.effect, r.df2, r.F, r.p)
     m === nothing || @printf(io, " | MATLAB F(1, %d) = %.2f, p = %.3f", m.df2, m.F, m.p)
-    @printf(io, " | paper F = %.2f, p = %.3f\n", pp.F, pp.p)
+    if alt2 !== nothing
+        a = alt2[(alt2.component .== r.component) .& (alt2.effect .== r.effect), :]
+        nrow(a) > 0 && @printf(io, " | ICs as listed F(1, %g) = %.2f, p = %.3f", a.df2[1], a.F[1], a.p[1])
+    end
+    @printf(io, " | MATLAB/R F = %.2f, p = %.3f\n", pp.F, pp.p)
 end
 if nrow(cmp_rows) > 0
     println(io, "\nPer-participant measures, Julia vs. MATLAB (all bins):")
