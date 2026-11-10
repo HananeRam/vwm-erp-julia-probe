@@ -1,0 +1,13 @@
+Cluster-based permutation tests, probe-locked (N = 52; 1000 permutations, seed 2026)
+
+N2     Julia: 191.4–449.2 ms (negative, p = 0.000)
+       MATLAB (N = 53): 191.4–449.2 ms
+
+FN400  Julia: 195.3–464.8 ms (negative, p = 0.000)
+       MATLAB (N = 53): 195.3–464.8 ms
+
+N2pc   Julia: no significant cluster
+       MATLAB (N = 53): no significant cluster
+
+Cluster limits depend only on the data (t threshold |t| > 2.008); p-values vary slightly with the random permutations.
+Paper: N2 191.4–449.2 ms and FN400 195.3–464.8 ms (split at 300 ms into the N2 191.4–300 ms and FN400 300–464.8 ms windows); no probe-locked N2pc cluster.

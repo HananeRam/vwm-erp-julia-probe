@@ -1,0 +1,7 @@
+# Raw data stays on OpenNeuro
+data/
+# Large intermediate tables (recreated by scripts/01)
+results/probe_erps.csv
+results/probe_trials.csv
+.DS_Store
+._*

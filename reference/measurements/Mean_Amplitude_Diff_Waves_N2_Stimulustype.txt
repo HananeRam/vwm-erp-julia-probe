@@ -1,0 +1,54 @@
+bin55_2-UR_2ChanAverageN2(Fz,FCz)	bin56_3-UR_2ChanAverageN2(Fz,FCz)	bin52_3-RWP_2ChanAverageN2(Fz,FCz)	bin53_3-RSP_2ChanAverageN2(Fz,FCz)	                          ERPset
+ 0.139	-0.424	 -5.790	  1.597	1_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-5.824	-10.085	  1.189	 -1.248	2_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.256	-1.966	 -1.652	 -3.171	3_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.193	 3.205	 -2.079	 -3.587	4_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.915	-1.367	 -2.502	 -1.669	7_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-3.102	-1.981	 -2.507	 -2.864	8_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.531	-1.758	 -4.069	 -3.488	9_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.825	 0.577	 -2.239	 -0.714	10_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.399	-3.140	 -0.711	 -2.343	11_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.832	-0.632	  0.867	 -1.806	12_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.761	 0.682	 -1.810	  0.417	13_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.671	 1.725	 -2.743	 -0.545	14_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 1.934	 0.389	 -0.446	 -1.276	15_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.989	-0.042	 -0.008	 -1.033	16_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 0.810	 0.720	 -2.277	 -1.248	17_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.251	 0.560	  3.227	 -2.361	18_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.111	 1.339	  1.120	  1.176	19_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.818	-0.730	 -4.062	 -1.846	21_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.392	-2.560	 -0.489	 -2.144	22_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.009	-2.338	  1.602	 -1.952	23_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.392	-0.909	 -0.438	  2.832	24_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.161	-0.241	 -0.079	 -2.186	25_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 1.015	-0.427	 -0.669	  0.273	28_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.970	-1.927	 -0.675	 -2.955	30_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.558	 1.928	 -0.606	  2.130	32_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.794	 0.529	 -2.990	  0.252	33_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 1.262	 3.298	 -0.659	 -0.755	34_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.730	 1.232	 -2.749	 -0.958	35_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 0.301	-0.431	 -1.482	 -1.584	36_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.195	-1.145	 -0.725	 -1.126	39_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 0.038	-1.976	 -0.434	  2.117	40_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 1.828	 2.688	 -0.367	  0.197	41_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.312	-2.428	  1.326	 -1.500	43_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-3.832	-0.672	 -0.618	 -0.219	46_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.608	-1.168	 -1.779	 -1.989	47_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.669	-0.404	 -1.538	 -2.771	48_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.098	-2.569	 -1.744	 -3.233	49_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.024	-2.403	 -0.867	 -0.362	50_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.440	-1.357	 -2.135	 -3.256	51_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 0.536	-2.921	 -0.663	 -2.510	52_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.305	-2.066	 -4.177	 -3.793	53_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-2.711	-2.105	 -0.883	 -4.139	54_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.737	 1.802	 -1.692	  0.906	58_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.255	-4.844	 -2.031	  0.049	59_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.230	 1.220	 -1.047	 -2.679	61_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.781	-0.456	  2.954	  0.167	62_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 2.181	-1.461	 -0.284	 -1.461	64_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-3.067	-0.295	 -2.506	 -2.821	69_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-4.541	 1.017	 -1.862	 -0.795	70_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.930	-1.879	 -3.665	 -1.728	72_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+ 2.169	-0.726	 -1.895	 -0.082	73_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-1.732	-0.649	 -2.386	 -1.205	74_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest
+-0.114	 0.133	 -2.733	 -2.752	76_N2_FN400_ProbeERPs_erp_ar_ChangeNoChange_waves_ClusterInterest

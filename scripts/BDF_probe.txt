@@ -1,0 +1,243 @@
+bin 1
+Change 2-UR, correct
+.{11; 15; 27; 31}{120}
+
+bin 2
+Change 3-UR, correct
+.{12; 16; 28; 32}{120}
+
+bin 3
+Change 3-RWP, correct
+.{13; 17; 29; 33}{120}
+
+bin 4
+Change 3-RSP, correct
+.{14; 18; 30; 34}{120}
+
+bin 5
+No-change 2-UR, correct
+.{19; 23; 35; 39}{120}
+
+bin 6
+No-change 3-UR, correct
+.{20; 24; 36; 40}{120}
+
+bin 7
+No-change 3-RWP, correct
+.{21; 25; 37; 41}{120}
+
+bin 8
+No-change 3-RSP, correct
+.{22; 26; 38; 42}{120}
+
+bin 9 
+Change 3-RWP 3-RSP, correct
+.{13; 14; 17; 18; 29; 30; 33; 34}{120}
+
+bin 10
+No-change 3-RWP 3-RSP, correct
+.{21; 22; 25; 26; 37; 38; 41; 42}{120}
+
+bin 11
+Change Repeated Probe, 3-RWP 3-RSP, correct 
+.{17; 18; 33; 34}{120}
+
+bin 12
+Change Unrepeated Probe, 3-RWP 3-RSP, correct 
+.{13; 14; 29; 30}{120}
+
+bin 13
+No-change Repeated Probe, 3-RWP 3-RSP, correct 
+.{25; 26; 41; 42}{120}
+
+bin 14
+No-change Unrepeated Probe, 3-RWP 3-RSP, correct 
+.{21; 22; 37; 38}{120}
+
+bin 15
+Left stimuli, correct
+.{11; 12; 13; 14; 17; 18; 19; 20; 21; 22; 25; 26}{120}
+
+bin 16
+Right stimuli, correct
+.{27; 28; 29; 30; 33; 34; 35; 36; 37; 38; 41; 42}{120}
+
+bin 17
+All stimuli
+.{11; 12; 13; 14; 17; 18; 19; 20; 21; 22; 25; 26; 27; 28; 29; 30; 33; 34; 35; 36; 37; 38; 41; 42}{120}
+
+bin 18
+Left (cue) Change, 3-RWP 3-RSP, correct 
+.{13; 14; 17; 18}{120}
+
+bin 19
+Left (cue) Change, 3-UR, correct 
+.{12}{120}
+
+bin 20
+Left (cue) No-Change, 3-RWP 3-RSP, correct 
+.{21;22;25;26}{120}
+
+bin 21
+Left (cue) No-Change, 3-UR, correct 
+.{20}{120}
+
+bin 22
+Right (cue) Change, 3-RWP 3-RSP, correct 
+.{29;30;33;34}{120}
+
+bin 23
+Right (cue) Change, 3-UR, correct 
+.{28}{120}
+
+bin 24
+Right (cue) No-Change, 3-RWP 3-RSP, correct 
+.{37;38;41;42}{120}
+
+bin 25
+Right (cue) No-Change, 3-UR, correct 
+.{36}{120}
+
+bin 26
+Unrepeated probe, Left (cue) Change, 3-RWP 3-RSP, correct 
+.{13; 14}{120}
+
+bin 27
+Repeated probe, Left (cue) Change, 3-RWP 3-RSP, correct 
+.{17;18}{120}
+
+bin 28
+Unrepeated probe, Left (cue) No-Change, 3-RWP 3-RSP, correct 
+.{21; 22}{120}
+
+bin 29
+Repeated probe, Left (cue) No-Change, 3-RWP 3-RSP, correct 
+.{25;26}{120}
+
+bin 30
+Unrepeated probe, Left (cue) Change, 3-UR, correct 
+.{12}{120}
+
+bin 31
+Unrepeated probe, Left (cue) No-Change, 3-UR, correct 
+.{20}{120}
+
+bin 32
+Unrepeated probe, Right (cue) Change, 3-RWP 3-RSP, correct 
+.{29;30}{120}
+
+bin 33
+Repeated probe, Right (cue) Change, 3-RWP 3-RSP, correct 
+.{33;34}{120}
+
+bin 34
+Unrepeated probe, Right (cue) No-Change, 3-RWP 3-RSP, correct 
+.{37;38}{120}
+
+bin 35
+Repeated probe, Right (cue) No-Change, 3-RWP 3-RSP, correct 
+.{41;42}{120}
+
+bin 36
+Unrepeated probe, Right (cue) Change, 3-UR, correct 
+.{28}{120}
+
+bin 37
+Unrepeated probe, Right (cue) No-Change, 3-UR, correct 
+.{36}{120}
+
+bin 38
+Change Repeated Probe, 3-RWP, correct 
+.{17; 33}{120}
+
+bin 39
+Change Repeated Probe, 3-RSP, correct 
+.{18; 34}{120}
+
+bin 40
+Change Unrepeated Probe, 3-RWP, correct 
+.{13; 29}{120}
+
+bin 41
+Change Unrepeated Probe, 3-RSP, correct 
+.{14; 30}{120}
+
+bin 42
+No-change Repeated Probe, 3-RWP, correct 
+.{25; 41}{120}
+
+bin 43
+No-change Repeated Probe, 3-RSP, correct 
+.{26; 42}{120}
+
+bin 44
+No-change Unrepeated Probe, 3-RWP, correct 
+.{21; 37}{120}
+
+bin 45
+No-change Unrepeated Probe, 3-RSP, correct 
+.{22; 38}{120}
+
+bin46
+Unrepeated probe, Left (cue) Change, 3-RWP, correct
+.{13}{120}
+
+bin47
+Unrepeated probe, Left (cue) Change, 3-RSP, correct
+.{14}{120}
+
+bin48 
+Repeated probe, Left (cue) Change, 3-RWP, correct
+.{17}{120}
+
+bin49
+Repeated probe, Left (cue) Change, 3-RSP, correct
+.{18}{120}
+
+bin50
+Unrepeated probe, Right (cue) Change, 3-RWP, correct
+.{29}{120}
+
+bin51
+Unrepeated probe, Right (cue) Change, 3-RSP, correct
+.{30}{120}
+
+bin52
+Repeated probe, Right (cue) Change, 3-RWP, correct
+.{33}{120}
+
+bin53
+Repeated probe, Right (cue) Change, 3-RSP, correct
+.{34}{120}
+
+bin54
+Unrepeated probe, Left (cue) No-Change, 3-RWP, correct
+.{21}{120}
+
+bin55
+Unrepeated probe, Left (cue) No-Change, 3-RSP, correct
+.{22}{120}
+
+bin56
+Repeated probe, Left (cue) No-Change, 3-RWP, correct
+.{25}{120}
+
+bin57
+Repeated probe, Left (cue) No-Change, 3-RSP, correct
+.{26}{120}
+
+bin58
+Unrepeated probe, Right (cue) No-Change, 3-RWP, correct
+.{37}{120}
+
+bin59
+Unrepeated probe, Right (cue) No-Change, 3-RSP, correct
+.{38}{120}
+
+bin60
+Repeated probe, Right (cue) No-Change, 3-RWP, correct
+.{41}{120}
+
+bin61
+Repeated probe, Right (cue) No-Change, 3-RSP, correct
+.{42}{120}

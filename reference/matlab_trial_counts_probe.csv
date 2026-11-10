@@ -1,0 +1,57 @@
+bin,bin_label,accepted_total_53
+1,Change 2-UR,7353
+2,Change 3-UR,7162
+3,Change 3-RWP,7299
+4,Change 3-RSP,7310
+5,No-change 2-UR,6909
+6,No-change 3-UR,5854
+7,No-change 3-RWP,7017
+8,No-change 3-RSP,6739
+9,Change 3-RWP 3-RSP,14609
+10,No-change 3-RWP 3-RSP,15139
+11,"Change Repeated Probe, 3-RWP 3-RSP",7331
+12,"Change Unrepeated Probe, 3-RWP 3-RSP",7278
+13,"No-change Repeated Probe, 3-RWP 3-RSP",7286
+14,"No-change Unrepeated Probe, 3-RWP 3-RSP",6470
+15,Left stimuli,27869
+16,Right stimuli,27773
+17,All stimuli,55642
+18,"Left (cue) Change, 3-RWP 3-RSP",7276
+19,"Left (cue) Change, 3-UR",3556
+20,"Left (cue) No-Change, 3-RWP 3-RSP",6926
+21,"Left (cue) No-Change, 3-UR",2955
+22,"Right (cue) Change, 3-RWP 3-RSP",7333
+23,"Right (cue) Change, 3-UR",3605
+24,"Right (cue) No-Change, 3-RWP 3-RSP",6830
+25,"Right (cue) No-Change, 3-UR",2899
+26,"Unrepeated probe, Left (cue) Change, 3-RWP 3-RSP",3616
+27,"Repeated probe, Left (cue) Change, 3-RWP 3-RSP",3660
+28,"Unrepeated probe, Left (cue) No-Change, 3-RWP 3-RSP",3277
+29,"Repeated probe, Left (cue) No-Change, 3-RWP 3-RSP",3649
+30,"Unrepeated probe, Left (cue) Change, 3-UR",3556
+31,"Unrepeated probe, Left (cue) No-Change, 3-UR",2955
+32,"Unrepeated probe, Right (cue) Change, 3-RWP 3-RSP",3662
+33,"Repeated probe, Right (cue) Change, 3-RWP 3-RSP",3671
+34,"Unrepeated probe, Right (cue) No-Change, 3-RWP 3-RSP",3193
+35,"Repeated probe, Right (cue) No-Change, 3-RWP 3-RSP",3637
+36,"Unrepeated probe, Right (cue) Change, 3-UR",3605
+37,"Unrepeated probe, Right (cue) No-Change, 3-UR",2899
+38,"Change Repeated Probe, 3-RWP",3665
+39,"Change Repeated Probe, 3-RSP",3666
+40,"Change Unrepeated Probe, 3-RWP",3634
+41,"Change Unrepeated Probe, 3-RSP",3644
+42,"No-change Repeated Probe, 3-RWP",3623
+43,"No-change Repeated Probe, 3-RSP",3663
+44,"No-change Unrepeated Probe, 3-RWP",3394
+45,"No-change Unrepeated Probe, 3-RSP",3076
+46,"Repeated item-probe, 3-RWP",7288
+47,"Repeated item-probe, 3-RSP",7329
+48,"Unrepeated item-probe, 3-RWP",7028
+49,"Unrepeated item-probe, 3-RSP",6720
+50,Repeated item-probe,14617
+51,Unrepeated item-probe,13748
+52,3-RWP,14316
+53,3-RSP,14049
+54,Diff_Overall_MEAN (Change minus No-change),28365
+55,2-UR,14262
+56,3-UR,13016
