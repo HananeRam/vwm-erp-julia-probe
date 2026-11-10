@@ -22,6 +22,20 @@ probe with memory:
 All analyses use correct-response trials only. The original analysis used 53 participants;
 participant 3 is excluded here (N = 52, see Notes).
 
+## Figures
+
+Produced by `scripts/03_measures_and_statistics.jl` (N = 52), in the design of Figures 5 and 6
+of the paper: change − no-change difference waves, 20 Hz low-pass, N2 (Fz, FCz) on top and
+FN400 (Fz, Cz) below, with the measurement windows.
+
+**By stimulus type** (2-UR, 3-UR, 3-RSP, 3-RWP)
+
+![Probe-locked N2 and FN400 difference waves by stimulus type](results/Figure5_N2_FN400_StimulusType.png)
+
+**By probe type** (repeated vs. unrepeated item)
+
+![Probe-locked N2 and FN400 difference waves by probe type](results/Figure6_N2_FN400_ProbeType.png)
+
 ## What is reproduced
 
 | MATLAB / R step | What it does | Julia |
