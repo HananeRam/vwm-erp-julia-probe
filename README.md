@@ -1,8 +1,8 @@
 # Probe-locked ERPs in visual working memory: a Julia reanalysis
 
 A Julia pipeline that reproduces the probe-locked analyses (N2pc, N2, FN400) of my open
-EEG dataset [ds006979 on OpenNeuro](https://doi.org/10.18112/openneuro.ds006979.v1.1.4)
-(version 1.1.4; Ramzaoui & Beck, *Scientific Reports*, Registered Report; Stage 1
+EEG dataset [ds006979 on OpenNeuro](https://doi.org/10.18112/openneuro.ds006979.v1.1.5)
+(version 1.1.5; Ramzaoui & Beck, *Scientific Reports*, Registered Report; Stage 1
 accepted, Stage 2 under review), from the BIDS data and the ICA weights of the analysis.
 
 It is the companion of [vwm-erp-julia](https://github.com/HananeRam/vwm-erp-julia),
@@ -57,9 +57,7 @@ bash scripts/download_data.sh
 ```
 
 This downloads the EEG files of the 53 participants (about 37 GB) and their ICA weights
-(about 5.5 GB) into `data/ds006979`. Participant 3 needs the ICA weights of the reprocessed
-analysis: until they are in the dataset derivatives, put the new
-`3_allERPs_optimized_weights.set` in place of the old one. If vwm-erp-julia already downloaded some of
+(about 5.5 GB) into `data/ds006979`.  If vwm-erp-julia already downloaded some of
 them, use the same folder: `DS006979=/path/to/data/ds006979 bash scripts/download_data.sh`,
 and run the Julia scripts with the same `DS006979` variable.
 
@@ -90,7 +88,7 @@ julia --project=. scripts/03_measures_and_statistics.jl # measures, ANOVAs, comp
 
 ## Validation
 
-Run on ds006979 version 1.1.4 with the ICA weights of the analysis, for the 53 participants of
+Run on ds006979 version 1.1.5 with the ICA weights of the analysis, for the 53 participants of
 the probe-locked analyses, against the MATLAB/ERPLAB analysis (blink components of
 `ICs_to_Remove.xlsx` removed for every participant). "MATLAB" is the same statistics
 applied to the MATLAB measurement files (Script #11c output, `reference/measurements`): no
@@ -120,7 +118,7 @@ MATLAB code is run, so any difference comes from the measures, not from the stat
 
 ## Notes
 
-- **Dataset version.** Use the latest version of the dataset, 1.1.4: it contains all the
+- **Dataset version.** Use the latest version of the dataset, 1.1.5: it contains all the
   corrections to the dataset and its files.
 
 ## License
