@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Download the 53 participants (EEG, events) and their ICA weights from OpenNeuro
-# (ds006979, version 1.1.0 or later) into data/ds006979: about 37 GB of EEG and
+# (ds006979, version 1.1.5 or later) into data/ds006979: about 37 GB of EEG and
 # 5.5 GB of ICA weights. Each file is compared with its size on OpenNeuro: complete
 # files are skipped and incomplete ones (an interrupted download) downloaded again,
 # so the script can simply be rerun after an interruption.
